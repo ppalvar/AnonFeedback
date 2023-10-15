@@ -1,6 +1,6 @@
 namespace Dtos.Outgoing;
 
-public class Productdetail
+public class ProductDetail
 {
     public string Name { get; set; } = null!;
     public string Description { get; set; } = null!;
