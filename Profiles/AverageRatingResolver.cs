@@ -17,7 +17,7 @@ public class AverageScoreResolver : IValueResolver<Product, ProductInfo, int>
             total += r.Score;
         }
 
-        return total / count;
+        return count != 0 ? total / count : 0;
     }
 }
 
@@ -34,6 +34,6 @@ public class _AverageScoreResolver : IValueResolver<Product, ProductDetail, int>
             total += r.Score;
         }
 
-        return total / count;
+        return count != 0 ? total / count : 0;
     }
 }

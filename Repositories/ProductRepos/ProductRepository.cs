@@ -21,6 +21,7 @@ public class ProductRepository : IProductRepository
 
     public async Task<IEnumerable<Product>> GetList()
     {
-        return _context.Products.Include(prod => prod.Reviews);
+        return _context.Products.Include(prod => prod.Reviews)
+                       .OrderBy(prod => prod.Reviews.Sum(rev => rev.Score) / prod.Reviews.Count());
     }
 }
