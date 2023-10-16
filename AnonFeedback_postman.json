@@ -1,0 +1,98 @@
+{
+    "info": {
+        "_postman_id": "7d58644e-e961-4c6a-83ec-86f8df781744",
+        "name": "AnonFeedback",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "list all",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://localhost:7077/products",
+                    "path": [
+                        "products"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "7077"
+                }
+            }
+        },
+        {
+            "name": "get detail",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://localhost:7077/products/4",
+                    "path": [
+                        "products",
+                        "4"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "7077"
+                }
+            }
+        },
+        {
+            "name": "get feedback from single",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://localhost:7077/products/1/feedback",
+                    "path": [
+                        "products",
+                        "1",
+                        "feedback"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "7077"
+                }
+            }
+        },
+        {
+            "name": "create feedback",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "https://localhost:7077/products/3/feedback",
+                    "path": [
+                        "products",
+                        "3",
+                        "feedback"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "7077"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"score\":5,\n  \"comment\":\"ahora deberia\"\n}"
+                }
+            }
+        },
+        {
+            "name": "search",
+            "request": {
+                "method": "GET"
+            }
+        }
+    ]
+}
